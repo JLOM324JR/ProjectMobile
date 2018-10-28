@@ -53,7 +53,7 @@
       </div>
     </ons-toolbar>
 
-    <ons-tabbar swipeable position="auto">
+    <ons-tabbar swipeable position="auto" id="tabbar">
       <ons-tab page="tab1.html" label="Home" icon="ion-home, material:md-home" badge="7" active>
       </ons-tab>
       <ons-tab page="tab2.html" label="Cart" icon="fa-shopping-cart" active-icon="fa-shopping-cart">
@@ -82,9 +82,9 @@
       <script id="icon_template" type="text/template">
         <ons-row style="height:120px" vertical-align="center">  
         <% categories.forEach(function(category){%>  
-        <ons-col style="background:#66ff99;" width="33%">
-          <p style="text-align: center; margin: 10px;">
-            <ons-icon size="60px" icon="<%= category.icon %>"></ons-icon>
+          <ons-col style="background:#294644; border:solid 1px white;color: white;" width="33%"onclick="changeTab('<%= category.name %>')">
+            <p style="text-align: center; margin: 10px;" >
+                    <ons-icon size="60px" icon="<%= category.icon %>"></ons-icon>
           </p>
           <p style="text-align: center; margin: 10px;" id="icon1_text">
             <%= category.name %>
