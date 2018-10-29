@@ -161,7 +161,7 @@
                 <% allPr.forEach(function(allPr){
                   var item = allPr.data();
                   %>  
-                  <ons-col width="100%" onclick="getDetail('<%=item.title%>');" >
+                  <ons-col width="50%" onclick="getDetail('<%=item.title%>');" >
                     <ons-card>
                       <img src="<%=item.photo[0]%>" alt="Onsen UI" style="width: 100%">
                       <div class="title">
@@ -176,9 +176,7 @@
                 </script>
       
       
-              <ons-button onclick="addnewdata()">
-                ADD DATA
-              </ons-button>
+            
       
           </ons-page>
         </template>
@@ -355,23 +353,6 @@
       
         }
       
-          //addnewdata
-          function addNewData() {
-            var data = {
-              pid: 5,
-              titlee: 'IPhoneXS',
-              price: 5000,
-              category: 'Eletronic'
-            }
-            db.collection("PRODUCTS").add(data)
-              .then(function (docRef) {
-                console.log("Document written with ID: ", docRef.id);
-              })
-              .catch(function (error) {
-                console.error("Error adding document: ", error);
-              });
-      
-          }
       
           
       
@@ -408,7 +389,7 @@
           })
           
         })
-        myNavigator.pushPage('tab3.html');
+       
 
       }
         </script>
