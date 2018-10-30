@@ -161,9 +161,9 @@
                 <% allPr.forEach(function(allPr){
                   var item = allPr.data();
                   %>  
-                  <ons-col width="50%" onclick="getDetail('<%=item.title%>');" >
+                  <ons-col width="100%" onclick="getDetail('<%=item.title%>');" >
                     <ons-card>
-                      <img src="<%=item.photo[0]%>" alt="Onsen UI" style="width: 100%">
+                      <img src="<%=item.photo%>" alt="Onsen UI" style="width: 100%">
                       <div class="title">
                         <%=item.title%>
                       </div>
@@ -174,8 +174,6 @@
                   </ons-col>
                   <%});%></ons-row>
                 </script>
-      
-      
              
       
           </ons-page>
@@ -202,11 +200,11 @@
                                 var data = dataDep.data(); %>
                           <ons-carousel swipeable auto-scroll overscrollable id="carousel" style="height: 300px;">
                             
-                                <ons-carousel-item id="carousel1DeP" style="background: url('<%= data.photo[0]%>') no-repeat center; background-size: contain;">
+                                <ons-carousel-item id="carousel1DeP" style="background: url('<%= data.photo[0] %>') no-repeat center; background-size: contain;">
                                 </ons-carousel-item>
-                                <ons-carousel-item id="carousel2DeP" style="background: url('<%= data.photo[1]%>') no-repeat center; background-size: contain;">
+                                <ons-carousel-item id="carousel2DeP" style="background: url('<%= data.photo[1] %>') no-repeat center; background-size: contain;">
                                 </ons-carousel-item>
-                                <ons-carousel-item id="carousel3DeP" style="background: url('<%= data.photo[2]%>') no-repeat center; background-size: contain;">
+                                <ons-carousel-item id="carousel3DeP" style="background: url('<%= data.photo[2] %>') no-repeat center; background-size: contain;">
                                 </ons-carousel-item>
                   
                          </ons-carousel>
