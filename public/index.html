@@ -209,23 +209,21 @@
                   
                          </ons-carousel>
                               
-                          <div class="title">
-                            <%= data.price%>
-                          </div>
-                          <div class="content">
-                            <div>
-                              <%= data.title %>
-                            </div>
-                            <ons-list>
-                              <ons-list-header>Bindings</ons-list-header>
-                              <ons-list-item>Vue</ons-list-item>
-                              <ons-list-item>Angular</ons-list-item>
-                              <ons-list-item>React</ons-list-item>
-                            </ons-list>
-                          </div>
-                          <ons-button onclick="addtocart('<%= data.title %>')">Add to Cart</ons-button>
-                          <%})%>
-                        </ons-card>
+                         <div class="content">
+                          <div class="title" align = "left" padding: 25px><font size = "4"><%= data.title %></font></div>
+                            <div class="price" align = "right"><font size = "4"><%= data.price%> ฿ </font></div>
+                          <ons-list>
+                            <ons-list-header>Bindings</ons-list-header>
+                            <ons-list-item>Vue<%=data.Vue%></ons-list-item>
+                            <ons-list-item>Angular<%=data.Angular%></ons-list-item>
+                            <ons-list-item>React<%=data.React%> </ons-list-item>
+                          </ons-list>
+                        </div>
+                        <div align = "center"> 
+                            <ons-button onclick="addtocart('<%=data.title%>')">ADD CART</ons-button>
+                        <%})%>
+                        </div>
+                      </ons-card>
                         
                    </script>
         
