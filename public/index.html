@@ -211,7 +211,7 @@
                               
                          <div class="content">
                           <div class="title" align = "left" padding: 25px><font size = "4"><%= data.title %></font></div>
-                            <div class="price" align = "right"><font size = "4"><%= data.price%> ฿ </font></div>
+                            <div class="price" align = "right"><font size = "4" color="red"><%= data.price%> ฿ </font></div>
                           <ons-list>
                             <ons-list-header>Bindings</ons-list-header>
                             <ons-list-item>Vue<%=data.Vue%></ons-list-item>
@@ -395,12 +395,12 @@
     let query = needle.toLowerCase();
     return heystack.filter(item => item.data().title.toLowerCase().indexOf(needle) >= 0);
   }
-  console.log("55+", filterItems(search, data));
+  console.log(filterItems(search, data));
   var item=filterItems(search, data);
-  console.log("xxx",item)
+  console.log(item)
   localStorage.setItem('items',item);
   
-  console.log('tong',item);
+  console.log(item);
 test(item);
 document.getElementById('tabbar').setActiveTab(2);
     // localStorage.setItem('title', item);
@@ -419,7 +419,7 @@ document.getElementById('tabbar').setActiveTab(2);
     // const fruits = data[1];
   }
   function test(title){
-console.log("888",title);
+console.log(title);
 // for(var i =0;i<tests.length;i++){
     
  
